@@ -1,0 +1,47 @@
+Início
+
+// Inicialização dos pontos
+alegria ← 0
+tristeza ← 0
+
+// Parte 1: Amizades
+Escreva("Riley fez novas amizades? (S/N): ")
+Leia(resposta)
+
+Se resposta = "S" então
+    Escreva("Quantas amizades ela fez? ")
+    Leia(qtdAmizades)
+    alegria ← alegria + (qtdAmizades * 10)
+Senão
+    tristeza ← tristeza + 30
+FimSe
+
+// Parte 2: Provas
+Escreva("Digite a nota da prova A1: ")
+Leia(A1)
+Escreva("Digite a nota da prova A2: ")
+Leia(A2)
+Escreva("Digite a nota da prova A3: ")
+Leia(A3)
+
+media ← (A1 + A2 + A3) / 3
+
+Se media >= 7 então
+    alegria ← alegria + 50
+Senão
+    tristeza ← tristeza + 50
+FimSe
+
+// Parte 3: Exercícios de programação
+Escreva("Quantos exercícios Riley conseguiu fazer (0 a 10)? ")
+Leia(exerciciosFeitos)
+
+alegria ← alegria + (exerciciosFeitos * 10)
+tristeza ← tristeza + ((10 - exerciciosFeitos) * 10)
+
+// Parte final: Comparação
+Se alegria > tristeza então
+    Escreva("A mudança para a nova cidade foi uma experiência incrível para a Riley.")
+Senão
+    Escreva("A mudança para a nova cidade foi uma experiência desagradável para a Riley.")
+FimSe
